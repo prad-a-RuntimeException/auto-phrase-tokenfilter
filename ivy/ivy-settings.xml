@@ -1,7 +1,12 @@
 
 <ivysettings>
-    <settings defaultResolver="central"/>
+    <settings defaultResolver="local-chain"/>
     <resolvers>
         <ibiblio name="central" m2compatible="true"/>
+        <ibiblio name="restlet" root="http://maven.restlet.com" m2compatible="true"/>
+<chain name="local-chain">
+            <resolver ref="central"/>
+            <resolver ref="restlet"/>
+        </chain>
     </resolvers>
 </ivysettings>
